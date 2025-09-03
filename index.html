@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ro'yxatdan o'tish — faqat ism</title>
+  <style>
+    body{font-family:system-ui,Arial;display:grid;place-items:center;min-height:100vh;margin:0;background:#f3f4f6}
+    .box{background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.08);width:320px}
+    label{display:block;margin-bottom:8px;font-weight:600}
+    input{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px}
+    button{margin-top:12px;width:100%;padding:10px;border-radius:8px;border:0;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+    .toast{display:none;margin-top:12px;padding:10px;border-radius:8px;background:#ecfccb;color:#065f46}
+  </style>
+</head>
+<body>
+  <div class="box" role="form" aria-label="Ro'yxatdan o'tish">
+    <form id="form">
+      <label for="name">Ism *</label>
+      <input id="name" name="name" type="text" placeholder="Ismingizni kiriting" required autocomplete="name" />
+      <button type="submit">Taklifnomaga O`tish</button>
+    </form>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const toast = document.getElementById('toast');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = nameInput.value.trim();
+      if(!name){
+        toast.style.display = 'block';
+        toast.style.background = '#fee2e2';
+        toast.style.color = '#991b1b';
+        toast.textContent = 'Iltimos, ismingizni kiriting.';
+        return;
+      }
+
+      // 👉 Ismni tabrik sahifasiga yuborish
+      window.location.href = "tabrik.html?name=" + encodeURIComponent(name);
+    });
+  </script>
+</body>
+</html>

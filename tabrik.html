@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To‘y taklifnomasi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f7f5f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 8px solid #d4af37;
+      border-radius: 16px;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 750px; /* katta ekranda kengayadi */
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      position: relative;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #2b1d12;
+      margin: 0;
+    }
+    .and { font-size: 18px; color: #6b5a45; margin: 6px 0; }
+    .rings { width: 300px; margin:0  auto; }
+    .greeting { font-size: 16px; color: #7a4a3c; font-weight: 600; margin: 12px 0; }
+    .text { font-size: 15px; line-height: 1.6; color: #4a3a32; margin-bottom: 16px; }
+    .datetime { font-size: 16px; font-weight: bold; color: #b03030; margin: 12px 0; }
+    .place { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+    .quran { font-size: 13px; font-style: italic; color: #3a2d24; }
+    .ornament { width: 100%; margin: 8px 0; }
+    .countdown { display: flex; justify-content: space-around; margin: 15px 0; flex-wrap: wrap; gap: 8px; }
+    .countdown div {
+      background: #f303c7;
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 13px;
+      color: #fff;
+      width: 65px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(#f303c7, #f303c7);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .music {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: #22c55e;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* 📱 Telefon ekrani uchun maxsus o‘lcham */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px 12px;
+    border-width: 5px;
+  }
+  .rings { width: 50px; }
+  h2 { font-size: 18px; }
+  h1 { font-size: 20px; }
+  .text { font-size: 13px; line-height: 1.4; }
+  .greeting { font-size: 14px; }
+  .btn { font-size: 12px; padding: 7px 12px; }
+  .countdown { gap: 6px; }
+  .countdown div { 
+    width: 48px; 
+    font-size: 11px; 
+    padding: 6px; 
+  }
+  .music {
+    width: 45px;
+    height: 45px;
+    font-size: 12px;
+    bottom: 12px;
+    right: 12px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- 1-kartochka -->
+  <div class="card">
+    <svg class="ornament" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 C300,0 900,100 1200,50" stroke="#d4af37" stroke-width="6" fill="none"/>
+      <circle cx="600" cy="50" r="10" fill="#d4af37"/>
+    </svg>
+
+    <h2>Jahongir</h2>
+    <div class="and">&amp;</div>
+    <h2>Feruza</h2>
+
+    <img src="rasm4.png" class="rings" alt="Uzuklar">
+
+    <div class="greeting">Ассалому алайкум!</div>
+
+<h1><p id="out"></p></h1>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name");
+  document.getElementById("out").textContent = name || "Ism kelmadi";
+</script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="text">
+      Аллохнинг мархамати, Расули Акрам Алайхисаломнинг умматларига мувофиқ оила қуряр эканмиз. 
+      Умримизнинг унутилмас онларига Сизни таклиф киламиз!
+    </div>
+
+    <div class="quran">
+      Аллох уларнинг қалбини севги ила бирлаштирди. <br>
+      (Анфол сураси 63-оят)
+    </div>
+
+    <svg class="ornament" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 C300,100 900,0 1200,50" stroke="#d4af37" stroke-width="6" fill="none"/>
+      <circle cx="600" cy="50" r="10" fill="#d4af37"/>
+    </svg>
+  </div>
+
+  <!-- 2-kartochka -->
+  <div class="card">
+    <svg class="ornament" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 C300,0 900,100 1200,50" stroke="#d4af37" stroke-width="6" fill="none"/>
+      <circle cx="600" cy="50" r="10" fill="#d4af37"/>
+    </svg>
+
+    <h2>To‘y haqida</h2>
+    <div class="names" id="names"></div>
+    <div class="date" id="date"></div>
+
+    <p>To‘y boshlanishigacha:</p>
+    <div class="countdown" id="countdown">
+      <div><span id="days">00</span><br>kun</div>
+      <div><span id="hours">00</span><br>soat</div>
+      <div><span id="minutes">00</span><br>daq</div>
+      <div><span id="seconds">00</span><br>sek</div>
+    </div>
+
+    <div class="address" id="address"></div>
+    <a href="#" target="_blank" class="btn" id="mapLink">Xaritada ko‘rish</a>
+
+    <svg class="ornament" viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 C300,0 900,100 1200,50" stroke="#d4af37" stroke-width="6" fill="none"/>
+      <circle cx="600" cy="50" r="10" fill="#d4af37"/>
+    </svg>
+  </div>
+
+  <!-- Musiqa tugmasi -->
+  <button class="music" onclick="toggleMusic()">♫</button>
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const coupleNames = "Jahongir & Feruza";
+    const weddingDate = new Date(2025, 10, 12, 18, 0, 0); 
+    const addressText = "Shahrisabz Shahri <br><b>Baxtli Oila tuyxonasi</b>";
+    const mapUrl = "https://yandex.uz/maps/org/86301963942/?ll=66.836588%2C39.050309&z=16.65";
+
+    document.getElementById("names").textContent = coupleNames;
+    document.getElementById("date").textContent = 
+      weddingDate.toLocaleDateString("uz-UZ") + " / soat " + 
+      weddingDate.toLocaleTimeString("uz-UZ", {hour: '2-digit', minute:'2-digit'});
+    document.getElementById("address").innerHTML = addressText;
+    document.getElementById("mapLink").href = mapUrl;
+
+    const countEl = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds"),
+    };
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate.getTime() - now;
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "To‘y boshlandi!";
+        return;
+      }
+      countEl.days.textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
+      countEl.hours.textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      countEl.minutes.textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      countEl.seconds.textContent = Math.floor((distance % (1000 * 60)) / 1000);
+    }, 1000);
+
+    const music = document.getElementById("bgMusic");
+    function toggleMusic() {
+      if (music.paused) { music.play(); }
+      else { music.pause(); }
+    }
+  </script>
+
+</body>
+</html>
